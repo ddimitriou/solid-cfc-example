@@ -47,12 +47,12 @@ component bindingName="Report"
     }
 }
 
-interface bingingName="ReportFormattable"
+interface bindingName="ReportFormattable"
 {
     public string function format(required Report report);
 }
 
-component bingingName="JsonReportFormatter" implements="ReportFormattable" accessors="true"
+component bindingName="JsonReportFormatter" implements="ReportFormattable" accessors="true"
 {
     public string function format(required Report report)
     {

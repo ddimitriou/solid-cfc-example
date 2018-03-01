@@ -8,7 +8,7 @@ component bindingName="SendWelcomeMessage"
 {
     property name="mailer";
 
-    public function init(Mailer mailer)
+    public any function init(Mailer mailer)
     {
         mailer = mailer;
     }
@@ -17,12 +17,12 @@ component bindingName="SendWelcomeMessage"
 // Refactored
 interface bindingName="Mailer"
 {
-    public function send();
+    public string function send();
 }
 
 component bindingName="SmtpMailer" implements="Mailer"
 {
-    public function send()
+    public string function send()
     {
 
     }
@@ -30,7 +30,7 @@ component bindingName="SmtpMailer" implements="Mailer"
 
 component bindingName="SendGridMailer" implements="Mailer"
 {
-    public function send()
+    public string function send()
     {
 
     }
@@ -40,8 +40,8 @@ component bindingName="SendWelcomeMessage"
 {
     property name="mailer";
 
-    public function init(Mailer mailer)
+    public any function init(Mailer mailer)
     {
-        mailer = $mailer;
+        mailer = mailer;
     }
 }

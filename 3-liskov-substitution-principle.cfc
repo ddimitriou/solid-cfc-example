@@ -30,12 +30,12 @@ component bindingName="RectangleTest"
 {
     property name="rectangle";
 
-    public function init(Rectangle rectangle)
+    public any function init(Rectangle rectangle)
     {
         rectangle = rectangle;
     }
 
-    public function testArea()
+    public any function testArea()
     {
         rectangle.setHeight(2);
         rectangle.setWidth(3);

@@ -1,9 +1,9 @@
 // Interface Segregation Principle Violation
 interface bindingName="Workable"
 {
-    public function canCode();
-    public function code();
-    public function test();
+    public boolean function canCode();
+    public string function code();
+    public string function test();
 }
 
 component bindingName="Programmer" implements="Workable"
@@ -47,7 +47,7 @@ component bindingName="ProjectManagement"
     public void function processCode(Workable member)
     {
         if (member.canCode()) {
-            member.code();
+            return member.code();
         }
     }
 }
@@ -88,6 +88,6 @@ component bindingName="ProjectManagement"
 {
     public void function processCode(Codeable member)
     {
-        member.code();
+        return member.code();
     }
 }

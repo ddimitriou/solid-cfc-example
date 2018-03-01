@@ -20,9 +20,9 @@ component bindingName="ProjectManagement"
     public string function process(member)
     {
         if (isInstanceOf(member, 'Programmer')) {
-            member.code();
+            return member.code();
         } elseif (isInstanceOf(member, 'Tester')) {
-            member.test();
+            return member.test();
         };
 
         throw(type='Invalid input member');
@@ -32,7 +32,7 @@ component bindingName="ProjectManagement"
 // Refactored
 interface bindingName="Workable"
 {
-    public function work();
+    public string function work();
 }
 
 component bindingName="Programmer" implements="Workable"

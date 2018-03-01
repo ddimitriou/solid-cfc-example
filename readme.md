@@ -14,3 +14,5 @@ Many client-specific interfaces are better than one general-purpose interface. [
 
 ### Dependency Inversion Principle
 Depend upon abstractions. Do not depend upon concretions. [Example](./5-dependency-inversion-principle.cff)
+
+This is a port from https://github.com/wataridori/solid-php-example
